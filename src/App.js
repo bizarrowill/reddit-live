@@ -22,7 +22,7 @@ class App extends Component {
         <ul>
           {this.state.posts.map(post => (
             <li key={post.id}>
-              <a href={post.url} target="_blank">
+              <a href={post.url} target="_blank" rel="noopener noreferrer">
                 {post.title}
               </a>
               <br />
