@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 
@@ -17,12 +16,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>/r/reactjs</h1>
+      <div>
+        <h1>Today's news from</h1>
+        <h2>/r/reactjs</h2>
         <ul>
-          {this.state.posts.map(post => {
-            return <li key={post.id}>{post.title}</li>;
-          })}
+          {this.state.posts.map(post => (
+            <li key={post.id}>
+              <a href={post.url} target="_blank">
+                {post.title}
+              </a>
+              <br />
+              by: <strong>{post.author}</strong> with a score of {post.score}.
+              <br />
+            </li>
+          ))}
         </ul>
       </div>
     );
