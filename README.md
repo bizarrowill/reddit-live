@@ -1,4 +1,5 @@
 # The latest from Reddit's r/reactjs
+This project is deployed at [reddit-reactjs.surge.sh/](http://reddit-reactjs.surge.sh/)
 
 ## Available Scripts
 
